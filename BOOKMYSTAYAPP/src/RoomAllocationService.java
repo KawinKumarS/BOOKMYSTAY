@@ -8,6 +8,7 @@ import java.util.Set;
 class RoomAllocationService {
 
     private RoomInventory inventory;
+    private BookingHistory history;
 
     // Track allocated room IDs per type
     private Map<String, Set<String>> allocatedRooms;
@@ -62,6 +63,7 @@ class RoomAllocationService {
         // Add this line after generating roomId
         String reservationId = roomId; // treat roomId as reservation ID
         System.out.println("================================");
+        history.addReservation(reservation);   // ✅ ADD THIS LINE
     }
 
     // Generate unique room ID
