@@ -59,7 +59,8 @@ class RoomAllocationService {
                         + " -> No " + roomType + " available");
             }
         }
-
+        // Add this line after generating roomId
+        String reservationId = roomId; // treat roomId as reservation ID
         System.out.println("================================");
     }
 
